@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Landing page for travel">
+        <meta name="keywords" content="Travel">
+        <meta name="author" content="Helen Grandez">
+        <title>TravelJoy - Explore, Dream, Discover</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!--Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap">
+        <style>
+            a, footer {
+                font-family: 'Roboto Slab', serif;
+                font-size: 1.2rem;
+                letter-spacing: 0.5px;
+            }
+            .intro-text {
+                background-color: #b4cfd4;
+            }
+            .intro-text-box {
+                color: white;
+                padding: 2rem;
+                border-radius: 0.5rem;
+                max-width: 750px;
+                margin: 0 auto;
+            }
+            .intro-text-box > h2 {
+                font-size: 2.5rem;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.7em;
+            }
+            .intro-text-box > p {
+                font-size: 1.3rem;
+                letter-spacing: 0.5px;
+                line-height: 1.7rem;
+                font-weight: 550;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 font-sans">
+        <!-- Navigation -->
+        <nav class="bg-blue-500 p-6" style="background-color: #b4cfd4;">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="media/kisspng-airplane-icon-a5-computer-icons-flight-airplane-5ad24caf248134.0904397415237316311495.png" alt="TravelJoy Logo" class="w-8 h-8 mr-2">
+                    <a class="text-white text-2xl font-semibold" href="#">TravelJoy</a>
+                </div>
+                <div>
+                    <a class="text-white mx-4 hover:text-gray-200" href="#">Home</a>
+                    <a class="text-white mx-4 hover:text-gray-200" href="#">About</a>
+                    <a class="text-white mx-4 hover:text-gray-200" href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="bg-gray-900 text-white py-20 relative">
+            <div class="container mx-auto flex flex-col items-center justify-center text-center animate-scaleUp">
+                <h1 class="font-bold text-5xl mb-4">Explore, Dream, Discover</h1>
+                <p class="text-lg mb-8">Experience the joy and adventure of travel with TravelJoy</p>
+                <a href="#" class="text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300" style="background-color: #b4cfd4;">Checkout My Adventures</a>
+            </div>
+            <img src="media/ross-parmly-rf6ywHVkrlY-unsplash.jpg" alt="Travel Image" class="absolute inset-0 object-cover w-full h-full opacity-20">
+        </section>
+
+        <!-- Introduction Text -->
+        <section class="intro-text py-12">
+            <div class="container mx-auto text-center intro-text-box animate-scaleUp">
+                <h2 class="text-3xl font-semibold mb-4">Why I Love to Travel</h2>
+                <p class="text-lg">Traveling is not just about visiting new places; it's about experiencing new cultures, meeting new people, and creating lifelong memories. Watch the video and find out why I love to travel!</p>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section style="background-color: #b4cfd4;">
+            <div class="container mx-auto">
+                <div class="max-w-4xl mx-auto">
+                    <video controls class="w-full" style="border-radius: 0.2em;">
+                        <source src="media/travel.MP4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-12 sm:py-20" style="background-color: #b4cfd4;"> 
+            <div class="container mx-auto">
+                <div class="flex flex-col items-center justify-center animate-heartbeat"> 
+                    <h2 class="text-4xl font-semibold mb-4" style="color: white;">Subscribe to Our Newsletter</h2>
+                    <form class="flex items-center"> 
+                        <input type="email" placeholder="Your Email Address" class="bg-white rounded-l-full px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500">
+                        <button type="submit" class="text-white px-6 py-2 rounded-r-full hover:bg-blue-600 transition duration-300" style="background-color: #95c5cd;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-6 text-white text-center" style="background-color: #b4cfd4;">
+            <p>&copy; 2024 TravelJoy. All rights reserved. Designed by Helen Grandez</p>
+        </footer>
+
+        <!-- Anime.js Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script>
+            // Define animation targets
+            const scaleUpTargets = document.querySelectorAll('.animate-scaleUp');
+
+            // Define animation properties
+            const scaleUpAnimation = {
+                scale: [0.5, 1],
+                opacity: [0, 1],
+                duration: 1000,
+                easing: 'easeOutSine'
+            };
+
+            // Animate the targets
+            anime.timeline({loop: false})
+                .add({
+                    targets: scaleUpTargets,
+                    ...scaleUpAnimation
+                })
+        </script>
+    </body>
+</html>
